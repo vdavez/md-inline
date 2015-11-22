@@ -13,7 +13,7 @@
   "license": "CC0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ashleygwilliams/my_package.git"
+    "url": "https://github.com/vzvenyach/md-inline.git"
   },
   "dependencies": {
     "mime": "^1.3.4"
