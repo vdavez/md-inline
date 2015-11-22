@@ -1,5 +1,5 @@
 # md-inline
-
+[![npm version](https://badge.fury.io/js/md-inline.svg)](https://badge.fury.io/js/md-inline)
 [![Code Climate](https://codeclimate.com/github/vzvenyach/md-inline/badges/gpa.svg)](https://codeclimate.com/github/vzvenyach/md-inline)
 [![Build Status](https://travis-ci.org/vzvenyach/md-inline.svg?branch=master)](https://travis-ci.org/vzvenyach/md-inline)
 
