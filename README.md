@@ -9,7 +9,11 @@ Answer: md-inline
 
 ## Usage
 
-`md-inline <markdown file>`
+`md-inline -f <markdown file>`
+
+If you're using pipes, you can also do as follows:
+
+`cat test.md | md-inline`
 
 ## License
 

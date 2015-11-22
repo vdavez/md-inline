@@ -1,16 +1,27 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var argv = require('minimist')(process.argv.slice(2));
 var mime = require('mime');
 var path = require('path');
 
-// Read file passed in command line args
-var f = fs.readFileSync(process.argv[2],'utf8');
-var dir = path.dirname(process.argv[2]);
-
 // Replace markdown img regex with <img> with base64 data uri & pipe to stdout
 var re =/!\[\]\(([^]*?)\)/g;
-process.stdout.write(f.replace(re, replaceImagesWithBase64));
+var dir = "";
+
+// Read file passed in command line args
+if (argv['f']){
+  var f = fs.readFileSync(argv['f'],'utf8');
+  var dir = path.dirname(argv['f']);
+  process.stdout.write(f.replace(re, replaceImagesWithBase64));
+}
+else {
+  process.stdin.setEncoding('utf8');
+  process.stdin.on('data', function (chunk) {
+    process.stdout.write(chunk.replace(re, replaceImagesWithBase64));
+  })
+}
+
 
 /**
  * Helper function to replace a markdown img with <img> tag with data uri
