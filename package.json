@@ -1,0 +1,26 @@
+{
+  "name": "md-inline",
+  "version": "1.0.0",
+  "bin": {
+    "md-inline": "index.js"
+  },
+  "description": "Inlining images as data uris in markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tape tests/test.js"
+  },
+  "author": "V. David Zvenyach",
+  "license": "CC0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashleygwilliams/my_package.git"
+  },
+  "dependencies": {
+    "mime": "^1.3.4"
+  },
+
+  "devDependencies": {
+    "tape": "^4.2.2",
+    "tape-spawn": "^1.4.0"
+  }
+}
